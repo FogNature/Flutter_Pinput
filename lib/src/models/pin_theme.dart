@@ -93,38 +93,9 @@ class PinTheme {
   }
 
   /// Create a new [PinTheme] from the current instance with new decoration
-  PinTheme copyDecorationWith({
-    Color? color,
-    DecorationImage? image,
-    BoxBorder? border,
-    BorderRadiusGeometry? borderRadius,
-    List<BoxShadow>? boxShadow,
-    Gradient? gradient,
-    BlendMode? backgroundBlendMode,
-    BoxShape? shape,
-  }) {
-    assert(decoration != null);
-    if (decoration !is BoxDecoration) return this;
+  PinTheme copyDecorationWith({required Decoration? newDecoration}) {
     return copyWith(
-      decoration: (decoration as BoxDecoration)?.copyWith(
-        color: color,
-        image: image,
-        border: border,
-        borderRadius: borderRadius,
-        boxShadow: boxShadow,
-        gradient: gradient,
-        backgroundBlendMode: backgroundBlendMode,
-        shape: shape,
-      ),
-    );
-  }
-
-  /// Create a new [PinTheme] from the current instance with new border
-  PinTheme copyBorderWith({required Border border}) {
-    assert(decoration != null);
-    if (decoration !is BoxDecoration) return this;
-    return copyWith(
-      decoration: decoration?.copyWith(border: border),
+      decoration: newDecoration,
     );
   }
 }
