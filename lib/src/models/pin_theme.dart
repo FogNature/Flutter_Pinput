@@ -103,7 +103,7 @@ class PinTheme {
     BlendMode? backgroundBlendMode,
     BoxShape? shape,
   }) {
-    assert(decoration != null && decoration is BoxDecoration?);
+    assert(decoration != null);
     if (decoration !is BoxDecoration) return this;
     return copyWith(
       decoration: (decoration as BoxDecoration)?.copyWith(
