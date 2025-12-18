@@ -77,7 +77,7 @@ class PinTheme {
     double? height,
     TextStyle? textStyle,
     BoxConstraints? constraints,
-    BoxDecoration? decoration,
+    Decoration? decoration,
     EdgeInsetsGeometry? padding,
     EdgeInsetsGeometry? margin,
   }) {
