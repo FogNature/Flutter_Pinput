@@ -104,6 +104,7 @@ class PinTheme {
     BoxShape? shape,
   }) {
     assert(decoration != null && decoration is BoxDecoration?);
+    if (decoration !is BoxDecoration) return this;
     return copyWith(
       decoration: (decoration as BoxDecoration)?.copyWith(
         color: color,
@@ -121,6 +122,7 @@ class PinTheme {
   /// Create a new [PinTheme] from the current instance with new border
   PinTheme copyBorderWith({required Border border}) {
     assert(decoration != null);
+    if (decoration !is BoxDecoration) return this;
     return copyWith(
       decoration: decoration?.copyWith(border: border),
     );
